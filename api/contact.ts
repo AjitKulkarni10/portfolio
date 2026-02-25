@@ -1,10 +1,50 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import nodemailer from "nodemailer";
 
+const RATE_LIMIT = {
+  windowMs: 60_000,
+  maxRequests: 5,
+};
+
+const ipHits = new Map<string, { count: number; start: number }>();
+
+function rateLimit(ip: string): boolean {
+  const now = Date.now();
+  const entry = ipHits.get(ip);
+
+  if (!entry) {
+    ipHits.set(ip, { count: 1, start: now });
+    return true;
+  }
+
+  if (now - entry.start > RATE_LIMIT.windowMs) {
+    ipHits.set(ip, { count: 1, start: now });
+    return true;
+  }
+
+  if (entry.count >= RATE_LIMIT.maxRequests) {
+    return false;
+  }
+
+  entry.count++;
+  return true;
+}
+
 export default async function handler(
   req: VercelRequest,
   res: VercelResponse
 ) {
+  const ip =
+    (req.headers["x-forwarded-for"] as string)?.split(",")[0] ||
+    req.socket.remoteAddress ||
+    "unknown";
+
+  if (!rateLimit(ip)) {
+    return res.status(429).json({
+      error: "Too many requests. Please try again later.",
+    });
+  }
+  
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
