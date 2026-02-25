@@ -1,4 +1,5 @@
 # Ajit Kulkarni — Portfolio
+i still dk the name to follow but here to goes
 
 A personal portfolio website inspired by classic retro game interfaces, designed to present my background, skills, and projects in an interactive and memorable way.
 
@@ -47,6 +48,7 @@ They helped with:
 - UI styling ideas
 - Debugging support
 - Content structuring in specific features (e.g., summarization, retrieval)
+- and for formating of this file that you are reading
 
 ---
 
