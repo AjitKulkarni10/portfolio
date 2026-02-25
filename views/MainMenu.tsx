@@ -11,7 +11,7 @@ interface Props {
 }
 
 const MENU_ITEMS = [
-  { label: "POKéDEX", state: ScreenState.POKEDEX },
+  { label: "DEX", state: ScreenState.POKEDEX },
   { label: "TRAINER", state: ScreenState.TRAINER },
   { label: "PROF LAB", state: ScreenState.LAB },
   { label: "CONTACT", state: ScreenState.CONTACT },
@@ -56,7 +56,7 @@ export const MainMenu: React.FC<Props> = ({ onSelect, theme, onThemeChange }) =>
          <div className="hidden md:block">
            <WindowFrame>
               <div className="text-[10px] md:text-xs space-y-2 font-bold tracking-widest">
-                <div className="flex justify-between gap-8"><span className="text-gray-500">MAP</span><span>PORTFOLIO HUB</span></div>
+                <div className="flex justify-between gap-8"><span className="text-gray-500">MAP</span><span>FOLIO HUB</span></div>
                 <div className="flex justify-between gap-8"><span className="text-gray-500">TRAINER</span><span>{PORTFOLIO_DATA.name}</span></div>
                 <div className="flex justify-between gap-8"><span className="text-gray-500">ID</span><span>{PORTFOLIO_DATA.id}</span></div>
                 <div className="flex justify-between gap-8"><span className="text-gray-500">BADGES</span><span>{PORTFOLIO_DATA.badges.length}</span></div>
@@ -71,7 +71,7 @@ export const MainMenu: React.FC<Props> = ({ onSelect, theme, onThemeChange }) =>
               <span className="animate-pulse text-red-500">▼</span> WELCOME TO THE REGION!
             </h2>
             <p className="leading-loose text-[10px] md:text-xs mb-6">
-              This is the digital realm of a passionate developer. Use the menu to navigate their skills, projects, and access Prof. Mango AI.
+              This is a digital workspace showcasing projects, skills, and experiments. Use the menu to explore.
             </p>
 
             <div className="border-t-[2px] border-dotted border-gray-400 pt-4">

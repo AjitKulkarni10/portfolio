@@ -28,8 +28,8 @@ export const StartScreen: React.FC<Props> = ({ onStart }) => {
           </div>
 
           <h1 className="text-3xl md:text-5xl lg:text-6xl text-black drop-shadow-[4px_4px_0_rgba(156,163,175,1)] leading-[1.5] mb-12">
-            POKéPORTFOLIO<br/>
-            <span className="text-xl md:text-3xl text-red-600 drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)]">VERSION 0.12</span>
+            DexFolio<br/>
+            <span className="text-xl md:text-3xl text-red-600 drop-shadow-[2px_2px_0_rgba(0,0,0,0.5)]">VERSION 0.67</span>
           </h1>
           
           <div className="animate-pulse flex flex-col items-center gap-4 bg-black text-white px-8 py-4 border-[4px] border-gray-400 rounded-sm hover:bg-gray-800 transition-colors shadow-[4px_4px_0_0_rgba(0,0,0,0.3)]">
@@ -39,7 +39,7 @@ export const StartScreen: React.FC<Props> = ({ onStart }) => {
        </div>
        
        <div className="absolute bottom-7 text-[10px] text-gray-400">
-         © {new Date().getFullYear()} to whom it may concern
+         © to whom it may concern
        </div>
     </div>
   );
