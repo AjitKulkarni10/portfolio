@@ -1,9 +1,6 @@
 import express from "express";
 import { createServer as createViteServer } from "vite";
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 async function startServer() {
   const app = express();
