@@ -1,7 +1,13 @@
 import { InferenceClient } from "@huggingface/inference";
 import { PORTFOLIO_DATA } from "../constants";
 
-const hf = new InferenceClient(process.env.VITE_HF_API_KEY);
+const apiKey = import.meta.env.VITE_HF_API_KEY;
+
+if (!apiKey) {
+  throw new Error("Missing VITE_HF_API_KEY");
+}
+
+const hf = new InferenceClient(apiKey);
 
 let chatHistory: { role: string; content: string }[] = [];
 
@@ -18,6 +24,7 @@ const systemInstruction = `
     - Only mention skills that are clearly important to the question.
     - Default to a one-screen response. Expand only if the user asks for more.
     - Always finish the final sentence cleanly.
+    - Avoid element type for the project details like dark, fire etc.
 
     Relevance rules:
     - If a question is not related to the developer or their work in any way, do NOT answer it.

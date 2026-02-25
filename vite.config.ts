@@ -11,8 +11,8 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [react()],
       define: {
-        'process.env.API_KEY': JSON.stringify(env.HF_API_KEY),
-        'process.env.HF_API_KEY': JSON.stringify(env.HF_API_KEY)
+        'process.env.API_KEY': JSON.stringify(env.VITE_HF_API_KEY),
+        'process.env.HF_API_KEY': JSON.stringify(env.VITE_HF_API_KEY)
       },
       resolve: {
         alias: {
