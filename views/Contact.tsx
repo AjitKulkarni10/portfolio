@@ -74,7 +74,7 @@ export const Contact: React.FC<Props> = ({ onBack, theme }) => {
                        name="name"
                        value={formData.name}
                        onChange={handleChange}
-                       placeholder="ASH KETCHUM" 
+                       placeholder="KASH ETCHUM" 
                        className="w-full p-3 border-[2px] border-black bg-white text-[10px] md:text-xs focus:outline-none focus:ring-2 focus:ring-black shadow-[inset_2px_2px_0_rgba(0,0,0,0.1)]" 
                     />
                 </div>
@@ -86,7 +86,7 @@ export const Contact: React.FC<Props> = ({ onBack, theme }) => {
                        name="email"
                        value={formData.email}
                        onChange={handleChange}
-                       placeholder="ASH@PALLETTOWN.COM" 
+                       placeholder="KASH@PALLET.COM" 
                        className="w-full p-3 border-[2px] border-black bg-white text-[10px] md:text-xs focus:outline-none focus:ring-2 focus:ring-black shadow-[inset_2px_2px_0_rgba(0,0,0,0.1)]" 
                     />
                 </div>
@@ -97,7 +97,7 @@ export const Contact: React.FC<Props> = ({ onBack, theme }) => {
                        name="message"
                        value={formData.message}
                        onChange={handleChange}
-                       placeholder="I CHOOSE YOU FOR THIS JOB!" 
+                       placeholder="I CHOOSE YOU!" 
                        className="w-full p-3 border-[2px] border-black bg-white text-[10px] md:text-xs h-32 resize-none focus:outline-none focus:ring-2 focus:ring-black shadow-[inset_2px_2px_0_rgba(0,0,0,0.1)]" 
                     />
                 </div>
