@@ -57,7 +57,7 @@ They helped with:
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend:** React, TypeScript, Tailwind CSS  
 - **Backend:** Node.js, Express  
