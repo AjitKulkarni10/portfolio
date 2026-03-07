@@ -2,7 +2,6 @@ import { InferenceClient } from "@huggingface/inference";
 import { PORTFOLIO_DATA } from "../constants";
 
 const apiKey = import.meta.env.VITE_HF_API_KEY;
-console.log("HF KEY:", import.meta.env.VITE_HF_API_KEY);
 
 if (!apiKey) {
   throw new Error("Missing VITE_HF_API_KEY");
@@ -53,7 +52,7 @@ export const sendMessage = async (message: string): Promise<string> => {
   // console.log(message)
 
   const response = await hf.chatCompletion({
-    model: "mistralai/Mistral-7B-Instruct-v0.2", // free + solid
+    model: "Qwen/Qwen2.5-7B-Instruct",
     messages: [
       { role: "system", content: systemInstruction },
       ...chatHistory,
